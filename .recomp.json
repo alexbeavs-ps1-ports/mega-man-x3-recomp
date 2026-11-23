@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Mega Man X3",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "mega-man-x3-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-00503"
+  }
+}

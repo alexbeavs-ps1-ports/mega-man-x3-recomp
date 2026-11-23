@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Mega Man X3"
+id = "SLES-00503"
+players = 1
+exe = "disc/SLES_005.03"
+disc = "disc/Mega Man X3 (Europe).cue"
+discs = ["disc/Mega Man X3 (Europe).cue"]
+disc_serials = ["SLES-00503"]
+load_address = "0x80010000"
+entry_pc = "0x800122E0"
+text_size = "0x0002D800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Mega Man X3 (Europe) (Track 1).bin"
+cue_name = "Mega Man X3 (Europe).cue"
+boot_exe = "SLES_005.03"
+known_sizes = [236065536]
+known_md5 = [
+  "a26485cfe274b26189984c66cdc18396",
+]
+known_sha1 = [
+  "fd61bd5bc9d3eae20bbb26020cf7e6a54c015d8d",
+]
+known_crc32 = [
+  "9110886c",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Mega Man X3 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 32
+required_disc_fp = "21328ce2a4ea2ec6e0f7ad703445b2d0ad23c08a2e39bc6cd94087be84a87307"

@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Mega Man X3",
+    "id": "SLES-00503",
+    "boot_exe": "SLES_005.03"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Mega Man X3 (Europe).cue",
+    "bin_name": "Mega Man X3 (Europe) (Track 1).bin",
+    "track_counts": [
+      32
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 236065536,
+      "md5": "a26485cfe274b26189984c66cdc18396",
+      "sha1": "fd61bd5bc9d3eae20bbb26020cf7e6a54c015d8d",
+      "crc32": "9110886c"
+    },
+    "disc_fp": "21328ce2a4ea2ec6e0f7ad703445b2d0ad23c08a2e39bc6cd94087be84a87307"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x800122E0",
+    "text_size": "0x0002D800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 281,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
